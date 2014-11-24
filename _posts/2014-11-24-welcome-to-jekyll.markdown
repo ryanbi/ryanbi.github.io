@@ -1,25 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "My Paperless Trail"
 date:   2014-11-24 16:37:20
-categories: jekyll update
+categories: Blog
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Last year I decided to go paperless. The reason that I started is because I have trouble throwing up papers from welcome letter from membership info. Additionally I have a full binder of everything including receipts that has faded that is full of my binder, credit card statements, etc. In addition, some of the paper trails I have back in Indonesia that. How good is that to have a digital verstion of everything that I can access anywhere.
+I decided that it needs to stop.
+First up I need a scanner for documents. Not a flatbed scanner. I bought a ScanSnap S1300, and it performed flawlessly. I started to scan everything in my binder, and apart from the documents that are really important such as certificates, others were recycled. I created another system that makes 
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+First up a paperless system therefore it needs a storage. However, since I want it to be accessible anywhere it means I have to find out a file hosting or a cloud provider. I choose Google Drive for hosting
