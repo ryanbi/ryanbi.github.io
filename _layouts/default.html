@@ -42,12 +42,11 @@
         background:#fbfbfb;
 
       }
+      .post-header {
 
-      .post-content {
-
-
-        
+        margin-top:30px;
       }
+
 
       .site-nav .page-link {
         font-family: 'Roboto';
@@ -56,7 +55,8 @@
       .site-title {
         font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
       }
-    
+
+
     </style>
 
     {% include header.html %}
@@ -79,7 +79,7 @@
 
 {% for post in site.posts limit:10 %}
   <header class="post-header" style="margin-bottom:10px;">
-    <div style="float:left; width:300px;margin:0;padding:0;">
+    <div style="float:left; width:450px;margin:0;padding:0;">
      <h1 class="post-title" style="font-size:24px;margin:0;padding:0;"><a href="{{ post.url }}">{{ post.title }}</a></h1>
     </div>
 
