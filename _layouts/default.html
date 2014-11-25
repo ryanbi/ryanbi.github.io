@@ -8,7 +8,8 @@
     <style>
       .more {
         position: relative;
-        height:100px; overflow:hidden
+        height:200px; overflow:hidden;
+        margin:0;
       }
       .more:after {
         position:absolute;
@@ -24,6 +25,37 @@
         background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
       }
+
+      .post-more {
+        border:1px solid #eee;
+        padding:0;
+        text-align:center;
+        font-family: 'Roboto', sans-serif; text-transform: uppercase;;
+        font-size:12px;
+        cursor:pointer;
+      }
+      .post-more-a:hover {
+        background:#eee;
+        text-decoration:none;
+      }
+      .post-more-a {
+        background:#fbfbfb;
+
+      }
+
+      .post-content {
+
+
+        
+      }
+
+      .site-nav .page-link {
+        font-family: 'Roboto';
+      }
+
+      .site-title {
+        font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
+      }
     
     </style>
 
@@ -32,18 +64,40 @@
     <div class="page-content">
       <div class="wrapper">
 
+        <div>
+          <div style="width:300px; float:left;">      <img src="//i.imgur.com/hWjVaVn.jpg?1" style="width:350px;"> </div>
+          <div style="float:right; padding-left:20px; width:370px;">
+<h2>Hi, I'm Ryan.</h2>
+<h4>An aspiring computational biologist, working in medical research.</h4>
+<h5>I enjoy technology news, recent finance, and of course science. Also a casual programmer and an avid news reader.</h5>
+          </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div style="margin-top:20px;margin-bottom:20px;color:#eee; height:0px; border-top:1px solid #eee;"> </div>
+
 
 
 {% for post in site.posts limit:10 %}
-  <header class="post-header">
-    <h1 class="post-title" style="font-size:30px;"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+  <header class="post-header" style="margin-bottom:10px;">
+    <div style="float:left; width:300px;margin:0;padding:0;">
+     <h1 class="post-title" style="font-size:24px;margin:0;padding:0;"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    </div>
+
+  <div style="float:right;">
+    {% for category in post.categories %}
+     <span class="label label-default" style="text-transform:uppercase;">{{ category}}</span>
+    {% endfor %}
+  
+    <p class="post-meta" style="float:right;margin-left:10px;">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+
+  </div>
+  <div style="clear:both;"></div>
   </header>
   {% if post.content.size > 20 %}
     <article id="{{ post.id || replace:'/','0'  }}" class="post-content more">
         {{ post.content }} 
     </article>
-    <a onclick=" $('#{{ post.id || replace:'/','0'  }}').toggleClass('more') ">Read more</a>
+    <a onclick=" $('#{{ post.id || replace:'/','0'  }}').toggleClass('more',1000);" style="display:block;" class="post-more-a"><div class="post-more"><i class="fa fa-chevron-down"></i> Read more <i class="fa fa-chevron-down"></i></div></a>
   {% else %}
     <article id="{{ post.id || replace:'/','0'  }}" class="post-content">
       {{ post.content }} 
