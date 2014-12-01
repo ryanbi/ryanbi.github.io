@@ -50,3 +50,121 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+      .container {
+        width: 900px !important;
+      }
+            .container-fluid{
+        margin-right: auto;
+  margin-left: auto;
+  max-width: 900px; /* or 950px */
+      }
+
+      .callout {
+
+        margin-bottom:10px;
+      }
+
+    .topbar {
+      border-top:8px solid #0B486B;
+    }
+
+    .links {
+
+      margin:10px;
+      height: 30px;
+    }
+    .links a {
+      color:#FFF;
+    }
+    
+    .links .fa {
+      margin-right:5px;      
+    }
+
+    .navbar {
+    	color:#000;
+    }
+
+    .navbar-brand {
+      font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
+      font-size:28px;
+    }
+
+      .more {
+        position: relative;
+        height:200px; overflow:hidden;
+        margin:0;
+      }
+      .more:after {
+        position:absolute;
+        bottom: 0;  
+        height: 100%;
+        width: 100%;
+        content: "";
+        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+      }
+      .post-title {
+        font-family: 'Roboto', serif;
+        font-size:18px;
+        margin-bottom:10px;
+      }
+      .post-title a {
+        font-size:24px;
+      }
+      .post-content {
+        font-family: 'Roboto Slab', serif;
+        font-size:14px;
+        line-height:175%;
+      }
+
+      .post-content img {
+        width:100%;
+      }
+
+      .post-more {
+        margin-top:10px;
+        padding:0;
+        text-align:right;
+        font-family: 'Roboto', sans-serif; text-transform: uppercase;;
+        font-size:12px;
+        cursor:pointer;
+      }
+      .post-more-a:hover {
+
+        text-decoration:none;
+      }
+      .post-more-a {
+
+
+      }
+      .post-header {
+
+        margin-top:30px;
+      }
+
+
+      .site-nav .page-link {
+        font-family: 'Roboto';
+      }
+
+      .site-title {
+        font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
+      }
+
+
+      .site-footer {
+
+		padding-top:20px;
+		padding-bottom:20px;
+        border-top:1px solid #eee;
+        background:azure;
+
+      }
