@@ -1,237 +1,102 @@
 <!DOCTYPE html>
 <html>
-
   {% include head.html %}
-
   <body>
 
-    <style>
-
-      .container {
-        width: 900px !important;
-      }
-
-
-
-    .topbar {
-      border-top:8px solid #0B486B;
-    }
-
-    .links {
-
-      margin:10px;
-      height: 30px;
-    }
-    .links a {
-      color:#FFF;
-    }
-    
-    .links .fa {
-      margin-right:5px;      
-    }
-
-
-
-    .navbar-brand {
-      font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
-      font-size:24px;
-      color:#0e0e0e;
-    }
-
-      .more {
-        position: relative;
-        height:200px; overflow:hidden;
-        margin:0;
-      }
-      .more:after {
-        position:absolute;
-        bottom: 0;  
-        height: 100%;
-        width: 100%;
-        content: "";
-        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-      }
-      .post-title {
-        font-family: 'Roboto', serif;
-        font-size:18px;
-        margin-bottom:10px;
-      }
-      .post-title a {
-        font-size:24px;
-      }
-      .post-content {
-        font-family: 'Roboto Slab', serif;
-        font-size:14px;
-        line-height:175%;
-      }
-
-      .post-content img {
-        width:100%;
-      }
-
-      .post-more {
-        margin-top:10px;
-        padding:0;
-        text-align:right;
-        font-family: 'Roboto', sans-serif; text-transform: uppercase;;
-        font-size:12px;
-        cursor:pointer;
-      }
-      .post-more-a:hover {
-
-        text-decoration:none;
-      }
-      .post-more-a {
-
-
-      }
-      .post-header {
-
-        margin-top:30px;
-      }
-
-
-      .site-nav .page-link {
-        font-family: 'Roboto';
-      }
-
-      .site-title {
-        font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
-      }
-
-
-      .site-footer {
-
-        height:100px;
-        border-top:1px solid #eee;
-        background:azure;
-
-      }
-
-    </style>
     <div class="topbar"></div>
 
-
-
-        <div class="container" style="padding:0; margin-top:25px;">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">{{ site.title }}</a>
-          </div>
-          <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right ">
-              <li> <a href="#about"><i class="fa fa-user"></i> About</a></li>
-              <li> <a href="https://github.com/ryanbi/CV/blob/master/cv.pdf?raw=true"><i class="fa fa-bookmark"></i> CV</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-      </div>
-
-
-      <div class="container">
-      <div class="jumbotron" style="padding:0;">
-          <div class="row">
-            <div class="col-md-5"><img class="img-responsive" src="//i.imgur.com/hWjVaVn.jpg?1"></div>
-            <div class="col-md-7">
-              <h2>Hi, I'm Ryan.</h2>
-              <h4>An aspiring computational biologist, working in medical research.</h4>
-              <h5>I enjoy technology news, recent finance, and of course science. Also a casual programmer and an avid news reader.</h5>
-            
-
-
-
+    <nav class="navbar" role="navigation">
+      <div class="container-fluid" style="margin-top:25px;">
+        <div class="">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="#">{{ site.title }}</a>
         </div>
-          </div>
-      </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right ">
+            <li> <a href="#about"><i class="fa fa-user"></i> About</a></li>
+            <li> <a href="https://github.com/ryanbi/CV/blob/master/cv.pdf?raw=true"><i class="fa fa-bookmark"></i> CV</a></li>
+          </ul>
+        </div>
     </div>
+  </nav>
 
-
-    <div class="container">
-      <div class="row">
-        {% for post in site.posts limit:10 %}
-              <div class="col-md-9 post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-              <div class="col-md-3">
-                <div>{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</div>
-                <div>
-                  {% for category in post.categories %}
-                  <span class="label label-default" style="text-transform:uppercase;">{{ category}}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div class="col-md-12 post-content">   
-                <div class="row">
-                     <div class="col-sm-9">
-                {% if post.content.size > 20 %}
-                  <article id="{{ post.id || replace:'/','0'  }}" class="post-content more">{{ post.content }}</article>
-                  <a onclick=" $('#{{ post.id || replace:'/','0'  }}').toggleClass('more',1000);" style="display:block;" class="post-more-a "><div class="post-more "><i class="fa fa-chevron-down"></i> Read more <i class="fa fa-chevron-down"></i></div></a>
-                {% else %}
-                  <article id="{{ post.id || replace:'/','0'  }}" class="post-content">
-                    {{ post.content }} 
-                  </article>
-                {% endif %}
-
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-12" style="margin-bottom:30px;">   </div>
-
-    {% endfor %}
-            </div>
-    </div>
-
-
-
-
-
-
-<footer class="site-footer">
-    <div class="container">
-      <div class="row" style="padding-top:20px; padding-bottom:20px;">
-        <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-3"> <img src="//i.imgur.com/R0KwLzz.jpg" alt="Pic" class="img-circle" style="width:100%;"></div>
-                <div class="col-md-3"> About Me:</div>
-                <div class="col-md-9" style="vertical-align:middle;"><h5>Hey, I'm Ryan! I live in Sydney and am a scientist and a programmer. Find out more here, or check out my links to the right.</h5></div>
-              </div>
-        </div>
-        <div class="col-md-6">
-
-          <div class="row">
-          <div class="col-md-3"> Find me on:</div>
-          <div class="col-md-12">
-          <nav class="links" >
-            <div style="display: inline-block;">
-              <span class="label label-primary"><a href="mailto:{{ site.email }}" title="{{ site.email }}"><i class="fa fa-envelope"></i>Email</a></span>
-              <span class="label label-primary"><a href="//github.com/{{ site.github_username }}" title="{{ site.github_username }}"><i class="fa fa-github"></i>Github</a></span>
-              <span class="label label-primary"><a href="//au.linkedin.com/in/ryanbipratama/" title="ryanbipratama"><i class="fa fa-linkedin"></i>LinkedIn</a></span>
-              <span class="label label-primary"><a href="//plus.google.com/u/0/+RyanbiPratama" title="+RyanbiPratama"><i class="fa fa-google-plus-square"></i>Google+</a></span>
-            </ul>
+  <div class="container-fluid">
+    <div class="jumbotron" style="padding:0;">
+        <div class="row">
+          <div class="col-md-5 col-sm-6 col-xs-12"><img class="img-responsive" src="//i.imgur.com/hWjVaVn.jpg?1"></div>
+          <div class="col-md-7 col-sm-6 col-xs-12">
+            <h2>Hi, I'm Ryan.</h2>
+            <h4>An aspiring computational biologist, working in medical research.</h4>
+            <h5>I enjoy technology news, recent finance, and of course science. Also a casual programmer and an avid news reader.</h5>
           </div>
-          </nav>
         </div>
-       </div>
-
-
     </div>
   </div>
 
-</footer>
+
+  <div class="container-fluid">
+    <div class="row">
+      {% for post in site.posts limit:10 %}
+        <div class="col-md-9 col-sm-6 col-xs-12 post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div>{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</div>
+          <div>
+            {% for category in post.categories %}
+            <span class="label label-default" style="text-transform:uppercase;">{{ category}}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-6 col-xs-12 post-content">   
+          <div class="row">
+            <div class="col-sm-9">
+              {% if post.content.size > 20 %}
+              <article id="{{ post.id || replace:'/','0'  }}" class="post-content more">{{ post.content }}</article>
+              <a onclick=" $('#{{ post.id || replace:'/','0'  }}').toggleClass('more',1000);" style="display:block;" class="post-more-a "><div class="post-more "><i class="fa fa-chevron-down"></i> Read more <i class="fa fa-chevron-down"></i></div></a>
+              {% else %}
+              <article id="{{ post.id || replace:'/','0'  }}" class="post-content">{{ post.content }}</article>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12" style="margin-bottom:30px;">   </div>
+      {% endfor %}
+    </div>
+  </div>
 
 
+  <footer class="site-footer">
+    <div class="container-fluid">
+      <div class="row" style="padding-top:20px; padding-bottom:20px;">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-2"> <img src="//i.imgur.com/R0KwLzz.jpg" alt="Pic" class="img-circle img-responsive" style="width:100%;"></div>
+            <div class="col-md-3 col-sm-6 col-xs-10"> About Me:</div>
+            <div class="col-md-9 col-sm-6 col-xs-12" style="vertical-align:middle;"><h5>Hey, I'm Ryan! I live in Sydney and am a scientist and a programmer. Find out more here, or check out my links to the right.</h5></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="row">
+            <div class="col-md-3"> Find me on:</div>
+            <div class="col-md-12">
+              <nav class="links" >
+                <div style="display: inline-block;">
+                  <span class="label label-primary"><a href="mailto:{{ site.email }}" title="{{ site.email }}"><i class="fa fa-envelope"></i>Email</a></span>
+                  <span class="label label-primary"><a href="//github.com/{{ site.github_username }}" title="{{ site.github_username }}"><i class="fa fa-github"></i>Github</a></span>
+                  <span class="label label-primary"><a href="//au.linkedin.com/in/ryanbipratama/" title="ryanbipratama"><i class="fa fa-linkedin"></i>LinkedIn</a></span>
+                  <span class="label label-primary"><a href="//plus.google.com/u/0/+RyanbiPratama" title="+RyanbiPratama"><i class="fa fa-google-plus-square"></i>Google+</a></span>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 
 
   </body>
-
 </html>
