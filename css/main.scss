@@ -52,8 +52,43 @@ $on-laptop:        800px;
 ;
 
 
+html, body {
+  height:100%;  
+}
+
+
+.fill {
+
+  height:100%;
+}
+
+
+.leftbg {
+
+  position: relative;
+
+ top: 40px;
+  left: 40px;
+  width: 200px;
+  max-width:300px;
+
+background:#eee;
+
+}
+
+
+
+
+.popover-content {
+  background:#eee;
+    color: red;
+    font-size: 10px;
+    margin:10px;
+}
+
+
       .container {
-        width: 900px !important;
+width:100%;
       }
             .container-fluid{
         margin-right: auto;
@@ -67,7 +102,7 @@ $on-laptop:        800px;
       }
 
     .topbar {
-      border-top:8px solid #0B486B;
+            border-top:8px solid #0B486B;
     }
 
     .links {
@@ -85,16 +120,39 @@ $on-laptop:        800px;
 
     .navbar {
     	color:#000;
+
+
+    }
+
+
+    .navbar .container{
+      margin-top:5px;
+      background:#fafafa;
+
+         box-shadow: 1px 1px 2px #aaa;
     }
 
     .navbar-brand {
       font-family: 'Roboto', sans-serif; text-transform: uppercase; font-weight:bold;
-      font-size:28px;
+      font-size:32px;
     }
 
+.navbar-nav {
+margin-top:-1px;
+height:20px;
+
+}
+
+.navbar-nav li {
+
+
+   margin-left:5px;
+
+
+}
       .more {
         position: relative;
-        height:200px; overflow:hidden;
+        height:300px; overflow:hidden;
         margin:0;
       }
       .more:after {
@@ -168,3 +226,7 @@ $on-laptop:        800px;
         background:azure;
 
       }
+body {
+
+  background-color:#F0F1FB;
+}
