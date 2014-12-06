@@ -2,11 +2,9 @@
 title: Ryan Pratama
 email: pratama@ryan.bi
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi, I'm Ryan, and this is my website. I enjoy finding out new things, reading news and current affairs, and also science and technology.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ryan.bi" # the base hostname & protocol for your site
+url: "https://ryan.bi" # the base hostname & protocol for your site
 
 github_username:  ryanbi
 

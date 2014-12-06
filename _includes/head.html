@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,10 +29,10 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
-      if (window.location.protocol != "https:" && window.location != "http://localhost:4000/")
+      if (window.location.protocol != "https:" && window.location.host != "localhost:4000")
         window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 
     </script>
 
 </head>
-
+<body>
